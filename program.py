@@ -1,34 +1,46 @@
 import operations
 
 class Program(operations.Operations):
-	def __init__(self, numero):
-		super().__init__(numero)
+	def __init__(self, number):
+		super().__init__(number)
 
 	def copy(self):
-		while(!super().a_zero()):
-			super().sub_a()
-			super().add_b()
-
-	def divide_2(self):
-		while(!super().a_zero()):
-			super().sub_a()
+		while(True):
 			if(super().a_zero()):
 				break
-			super().sub_a()
-			super().add_b()
+			else:
+				super().sub_a()
+				super().add_b()			
+
+	def divide_2(self):
+		while(True):
+			if(super().a_zero()):
+				break
+			else:
+				super().sub_a()
+				if(super().a_zero()):
+					break
+				super().sub_a()
+				super().add_b()
 
 	def add_2(self):
-		while(!super().a_zero()):
-			super().sub_a()
-			super().add_b()
+		while(True):
+			if(super().a_zero()):
+				break
+			else:
+				super().sub_a()
+				super().add_b()
 		super().add_b()
 		super().add_b()
 
 	def multiply_2(self):
-		while(!super().a_zero()):
-			super().sub_a()
-			super().add_b()
-			super().add_b()
+		while(True):
+			if(super().a_zero()):
+				break
+			else:
+				super().sub_a()
+				super().add_b()
+				super().add_b()
 
 	
 

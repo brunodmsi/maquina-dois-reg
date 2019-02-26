@@ -1,23 +1,33 @@
-import programs
+import program
 
 def main():
-	while menu != 5:
-		print("MENU\n   (1) - Copia\n   (2) - Soma 2\n   (3) - Multiplica por 2\n   (4) - Divide por 2\n   (5) - Sair \n")
-		menu = int(input("  -> "))
+	menu = 0
 
-		handler = program.Program()
+	while menu != 5:
+		print("\n\n --> MAQUINA DOIS REG <--\n")
+		print("   (1) - Copia\n   (2) - Soma 2\n   (3) - Multiplica por 2\n   (4) - Divide por 2\n   (5) - Sair \n")
+		menu = int(input("  -> "))
 
 		a_value = int(input("\n Insira o valor de A -> "))
 
+		handler = program.Program(a_value)
+
+		print("\n")
+
 		if menu == 1:
+			print("Copiar valor {0} de A para B".format(a_value))
 			handler.copy()
-		else if menu == 2:
+		elif menu == 2:
+			print("Somar 2 ao valor de {0}".format(a_value))
 			handler.add_2()
-		else if menu == 3:
+		elif menu == 3:
+			print("Multiplicar valor {0}".format(a_value))
 			handler.multiply_2()
-		else if menu == 4:
+		elif menu == 4:
+			print("Dividir valor {0}".format(a_value))
 			handler.divide_2()
-		else if menu == 5:
+		elif menu == 5:
+			print("SAINDO...")
 			break
 		else:
 			print("Nao reconhecido")
